@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Mania</title>
+    <style>
+        body {
+            font-family: 'Minecraft', sans-serif;
+            background-color: #222;
+            color: #ddd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('MinecraftRegular-Bmg3.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            color: #00cc00;
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000;
+            animation: neon 2s infinite alternate;
+        }
+
+        @keyframes neon {
+            from {
+                text-shadow: 2px 2px 4px #00cc00;
+            }
+            to {
+                text-shadow: 2px 2px 10px #00ff00;
+            }
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        section {
+            background-color: #444;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #ffcc00;
+            margin-top: 0;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .dica {
+            background-color: #555;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .interativo {
+            background-color: #666;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .interativo:hover {
+            background-color: #777;
+        }
+
+        #modo-dificuldade {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .modo-botao {
+            background-color: #0099cc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .modo-botao:hover {
+            background-color: #00aacc;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minecraft Mania</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Modos de Jogo</h2>
+            <ul>
+                <li><strong>Sobrevivência:</strong> Colete recursos, construa abrigos e lute contra monstros.</li>
+                <li><strong>Criativo:</strong> Recursos ilimitados e voo para construir o que quiser.</li>
+                <li><strong>Aventura:</strong> Explore mapas personalizados e siga histórias.</li>
+                <li><strong>Espectador:</strong> Voe pelo mundo sem interagir.</li>
+                <li><strong>Hardcore:</strong> Sobrevivência com morte permanente.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Dicas Essenciais</h2>
+            <div class="dica">
+                <strong>Comece com o básico:</strong> Colete madeira, faça uma bancada de trabalho e ferramentas.
+            </div>
+            <div class="dica">
+                <strong>Construa um abrigo:</strong> Proteja-se dos monstros durante a noite.
+            </div>
+            <div class="dica">
+                <strong>Explore cavernas:</strong> Encontre minérios valiosos, mas cuidado com os monstros.
+            </div>
+            <div class="dica">
+                <strong>Cultive alimentos:</strong> Plante trigo, cenoura e batata para não passar fome.
+            </div>
+        </section>
+        <section>
+            <h2>Interatividade</h2>
+            <div class="interativo" onclick="alert('Você encontrou um diamante!')">Clique aqui para um diamante!</div>
+        </section>
+        <section>
+            <h2>Modo de Dificuldade</h2>
+            <div id="modo-dificuldade">
+                <button class="modo-botao" onclick="setDificuldade('Fácil')">Fácil</button>
+                <button class="modo-botao" onclick="setDificuldade('Normal')">Normal</button>
+                <button class="modo-botao" onclick="setDificuldade('Difícil')">Difícil</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Minecraft Mania</p>
+    </footer>
+    <script>
+        function setDificuldade(dificuldade) {
+            alert(`Dificuldade definida para ${dificuldade}!`);
+        }
+    </script>
+</body>
+</html>
